@@ -1,0 +1,2 @@
+qrcode 1.5.4 (MIT), https://github.com/soldair/node-qrcode
+Empaquetado con esbuild como IIFE que expone window.QRCode.
