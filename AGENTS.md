@@ -1,6 +1,6 @@
 # AGENTS.md
 
-Guía para personas y agentes de IA (Claude Code, Codex, Cursor, Copilot, etc.) que trabajan en este repositorio.
+Guía para personas y agentes de IA 
 
 ## Contexto
 
@@ -52,5 +52,6 @@ Guía para personas y agentes de IA (Claude Code, Codex, Cursor, Copilot, etc.) 
 - Idioma: español en nombres de funciones, variables, rutas, textos y comentarios, igual que el código existente.
 - Commits estilo Conventional Commits: `tipo(area): descripción`. Ejemplo: `fix(carrito): no permitir cantidades mayores a 99`.
 - Commits pequeños, enfocados en una sola cosa.
+- Documentación: si el cambio altera lo que ve el cliente o el panel, actualizar en el mismo commit `docs/manual-usuario.md` y agregar una línea en la sección **Sin publicar** de `CHANGELOG.md`. El detalle del flujo de Git está en `LEEME.md`, sección 8.
 - PR: título en español; descripción corta.
 - **Sin marca de IA** en commits ni en PR: no agregar `Co-Authored-By` de asistentes de IA, ni "Generated with …", ni emojis o enlaces de herramientas de IA. El autor es la persona que hace el commit.

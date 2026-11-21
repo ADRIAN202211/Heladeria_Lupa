@@ -81,7 +81,10 @@ $whatsapp = preg_replace('/\D+/', '', ajuste('whatsapp'));
 </footer>
 
 <?php if ($whatsapp !== ''): ?>
-    <a class="wa-flotante" href="https://wa.me/<?= e($whatsapp) ?>" aria-label="Escribir por WhatsApp">WhatsApp</a>
+    <a class="wa-flotante" href="https://wa.me/<?= e($whatsapp) ?>">
+        <svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true"><path d="M12 3.5a8.5 8.5 0 0 0-7.3 12.8L3.6 20.4l4.3-1.1A8.5 8.5 0 1 0 12 3.5Z" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linejoin="round"/><path d="M8.8 9.6h.01M12 9.6h.01M15.2 9.6h.01" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"/></svg>
+        <span class="wa-texto">Escríbenos por WhatsApp</span>
+    </a>
 <?php endif; ?>
 
 <button class="subir" id="subir" type="button" aria-label="Volver arriba">↑</button>

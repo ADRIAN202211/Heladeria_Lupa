@@ -182,6 +182,15 @@ $csv = pedidos_csv();
 afirmar(str_starts_with($csv, "\xEF\xBB\xBF") && str_contains($csv, '2x Cono Arequipe'), 'CSV tiene BOM y lista los productos');
 unset($_SESSION['mesa']);
 
+// 12. Marcado del menú: cada <section> debe cerrarse (antes quedaba una abierta)
+ob_start();
+ctrl_menu();
+$htmlMenu = ob_get_clean();
+afirmar(
+    substr_count($htmlMenu, '<section') === substr_count($htmlMenu, '</section>'),
+    'el menú cierra todas sus <section>'
+);
+
 // Limpieza
 @unlink($temporal);
 

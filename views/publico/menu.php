@@ -20,9 +20,10 @@
         </select>
         <button class="btn btn-rosa" type="submit">Guardar</button>
     </form>
+</section>
 
-<section class="bloque bloque-menu">
-    <h1 class="titulo-pagina">Menú</h1>
+<section class="bloque bloque-menu bloque-lista" aria-labelledby="titulo-productos">
+    <h2 id="titulo-productos" class="titulo-seccion">Todos los productos</h2>
     <p class="subtitulo">Pulsa el carrito de cada producto para agregarlo.</p>
 
     <form class="buscador" method="get" action="index.php">
