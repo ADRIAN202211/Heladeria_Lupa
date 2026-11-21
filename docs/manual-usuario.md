@@ -190,7 +190,7 @@ La pantalla **Pedidos** muestra:
 
 **Ver un pedido.** Al pulsar **"Ver"** se abre la página **Pedido #N** con los datos del cliente, la forma de entrega, la dirección (si es domicilio), la mesa (si aplica), el método de pago, la nota, la lista de productos con cantidades y totales, y el estado actual.
 
-**Cambiar el estado.** Elige el nuevo estado en **"Estado del pedido"** y pulsa **"Actualizar estado"**. El sitio confirma: *"Estado actualizado."* Los estados son:
+**Cambiar el estado.** Elige el nuevo estado en **"Estado del pedido"** y pulsa **"Actualizar estado"**. El sitio confirma: *"Estado actualizado."* Si el pedido ya no existe, muestra un error en lugar de confirmar. Los estados son:
 
 | Estado | Cuándo usarlo |
 |---|---|

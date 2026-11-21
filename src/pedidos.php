@@ -189,6 +189,11 @@ function pedido_cambiar_estado(int $id, string $estado): void
     if (!array_key_exists($estado, ESTADOS_PEDIDO)) {
         throw new InvalidArgumentException('Estado no válido.');
     }
+    $existe = db()->prepare('SELECT COUNT(*) FROM pedidos WHERE id = ?');
+    $existe->execute([$id]);
+    if ((int) $existe->fetchColumn() === 0) {
+        throw new InvalidArgumentException('Pedido no encontrado.');
+    }
     db()->prepare('UPDATE pedidos SET estado = ? WHERE id = ?')->execute([$estado, $id]);
 }
 

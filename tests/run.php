@@ -175,6 +175,7 @@ afirmar($guardado['lineas'][0]['nombre'] === 'Cono Arequipe' && $guardado['linea
 pedido_cambiar_estado($idPedido, 'entregado');
 afirmar(pedido_obtener($idPedido)['estado'] === 'entregado', 'cambiar estado funciona');
 esperar_error(fn () => pedido_cambiar_estado($idPedido, 'volando'), 'no acepta un estado inventado');
+esperar_error(fn () => pedido_cambiar_estado(999999, 'confirmado'), 'un pedido que no existe da error');
 afirmar(pedidos_resumen_hoy()['pedidos'] === 1, 'resumen de hoy cuenta el pedido entregado');
 afirmar(csv_celda('=2+2') === '"\'=2+2"', 'CSV protege celdas que empiezan con =');
 afirmar(csv_celda('Ana "la"') === '"Ana ""la"""', 'CSV duplica las comillas');

@@ -24,6 +24,7 @@ Rama de trabajo: `feature/estetica-y-documentacion` (creada desde `staging`).
 ### Corregido
 
 - **Menú.** La sección de la mesa se abría y nunca se cerraba, y el segundo bloque repetía el título "Menú". Ahora hay dos secciones bien cerradas y el segundo título es "Todos los productos". Se agregó una prueba en `tests/run.php` que falla con el código anterior.
+- **Pedidos.** Cambiar el estado de un pedido que ya no existe muestra un error en lugar de decir "Estado actualizado.".
 
 ### Documentación
 
