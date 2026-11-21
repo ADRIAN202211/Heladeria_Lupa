@@ -7,6 +7,8 @@ Sitio para el cliente (menú, carrito, pedido por WhatsApp, mesas con código QR
 | `LEEME.md` (este archivo) | Instalar, ejecutar, probar, entender el proyecto y usar Git. |
 | `docs/manual-usuario.md` | Manual de uso para el cliente y para el administrador del negocio. |
 | `CHANGELOG.md` | Lista de cambios visibles por versión. |
+| `docs/guia-de-estudio.md` | Guía para estudiar el proyecto y prepararse para sustentarlo. |
+| `docs/referencia-del-codigo.md` | Detalle técnico de cada función, con su línea exacta. |
 | `AGENTS.md` | Reglas de código y de trabajo para personas y agentes de IA. |
 
 ---
@@ -101,7 +103,7 @@ config/          config.php: valores iniciales (menú de ejemplo, mesas, datos d
 data/            base SQLite local (lupa.sqlite). NO se versiona.
 bin/             setup.php (base y contraseña), iniciar.sh (servidor local), verificar.sh (pruebas)
 tests/           run.php: pruebas sin dependencias externas
-docs/            manual-usuario.md
+docs/            manual-usuario.md, guia-de-estudio.md, referencia-del-codigo.md
 ```
 
 Todas las páginas se abren por `index.php?r=...` (por ejemplo `?r=menu`, `?r=admin/pedidos`). Así funcionan los códigos QR sin configurar el servidor.
