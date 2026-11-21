@@ -11,6 +11,8 @@ function despachar(string $ruta, string $metodo): void
         'GET inicio' => 'ctrl_inicio',
         'GET menu' => 'ctrl_menu',
         'GET info' => 'ctrl_info',
+        'GET contacto' => 'ctrl_contacto',
+        'POST contacto' => 'ctrl_contacto_enviar',
         'POST mesa' => 'ctrl_mesa_elegir',
         'GET carrito' => 'ctrl_carrito',
         'POST carrito' => 'ctrl_carrito_accion',

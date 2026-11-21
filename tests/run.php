@@ -182,6 +182,13 @@ $csv = pedidos_csv();
 afirmar(str_starts_with($csv, "\xEF\xBB\xBF") && str_contains($csv, '2x Cono Arequipe'), 'CSV tiene BOM y lista los productos');
 unset($_SESSION['mesa']);
 
+// 17. Página de contacto
+ob_start();
+ctrl_contacto();
+$htmlContacto = ob_get_clean();
+afirmar(str_contains($htmlContacto, 'Datos de contacto') && str_contains($htmlContacto, ajuste('telefono')), 'la página de contacto muestra el teléfono del negocio');
+afirmar(str_contains($htmlContacto, 'name="mensaje"') && str_contains($htmlContacto, '_csrf'), 'el formulario de contacto lleva el mensaje y la clave CSRF');
+
 // Limpieza
 @unlink($temporal);
 

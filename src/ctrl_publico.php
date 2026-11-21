@@ -65,6 +65,27 @@ function ctrl_info(): void
     ]);
 }
 
+function ctrl_contacto(): void
+{
+    render('publico/contacto', [
+        'titulo' => 'Contacto · ' . ajuste('negocio_nombre'),
+    ]);
+}
+
+/** Recibe el mensaje del formulario y abre WhatsApp con el texto listo. */
+function ctrl_contacto_enviar(): void
+{
+    csrf_verificar();
+    $nombre = trim((string) ($_POST['nombre'] ?? ''));
+    $mensaje = trim((string) ($_POST['mensaje'] ?? ''));
+    if (mb_strlen($nombre) < 2 || $mensaje === '') {
+        flash('Escribe tu nombre y un mensaje.', 'error');
+        redirigir(url('contacto'));
+    }
+    $texto = 'Hola, soy ' . mb_substr($nombre, 0, 80) . '. ' . mb_substr($mensaje, 0, 500);
+    redirigir(whatsapp_url(ajuste('whatsapp'), $texto));
+}
+
 function ctrl_carrito(): void
 {
     $items = carrito_items();

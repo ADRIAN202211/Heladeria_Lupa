@@ -23,6 +23,7 @@ $whatsapp = preg_replace('/\D+/', '', ajuste('whatsapp'));
         <a href="<?= e(url('inicio')) ?>" class="<?= ($seccion ?? '') === 'inicio' ? 'activo' : '' ?>">Inicio</a>
         <a href="<?= e(url('menu')) ?>" class="<?= ($seccion ?? '') === 'menu' ? 'activo' : '' ?>">Menú</a>
         <a href="<?= e(url('info')) ?>" class="<?= ($seccion ?? '') === 'info' ? 'activo' : '' ?>">Información</a>
+        <a href="<?= e(url('contacto')) ?>" class="<?= ($seccion ?? '') === 'contacto' ? 'activo' : '' ?>">Contacto</a>
         <a href="<?= e(url('carrito')) ?>" class="<?= ($seccion ?? '') === 'carrito' ? 'activo' : '' ?>">Carrito</a>
     </nav>
 
@@ -55,6 +56,7 @@ $whatsapp = preg_replace('/\D+/', '', ajuste('whatsapp'));
                 <li><a href="<?= e(url('inicio')) ?>">Inicio</a></li>
                 <li><a href="<?= e(url('menu')) ?>">Menú</a></li>
                 <li><a href="<?= e(url('info')) ?>">Información</a></li>
+                <li><a href="<?= e(url('contacto')) ?>">Contacto</a></li>
                 <li><a href="<?= e(url('carrito')) ?>">Carrito</a></li>
             </ul>
         </div>
